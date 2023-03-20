@@ -116,16 +116,20 @@ textarea {
 input[type="checkbox"] {
   cursor: pointer;
   accent-color: var(--red);
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
+
 input[type="radio"] {
   cursor: pointer;
   accent-color: var(--red);
-  transform: scale(1.5);
+  transform: scale(1.4);
 }
-
+input::placeholder {
+  font-size: 0.8rem;
+  color: gray;
+}
 input[type="number"] {
-  max-width: 10ch;
+  /*   max-width: 10ch; */
 }
 
 ::-webkit-calendar-picker-indicator {
@@ -140,6 +144,7 @@ button {
   color: #fff;
   transition: 0.3s all;
   cursor: pointer;
+  box-shadow: 0 0 5px 1px lightgrey;
 }
 
 button i {
@@ -151,11 +156,10 @@ button:hover {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  gap: 30px;
-  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .labelInput {
@@ -163,6 +167,10 @@ form {
   flex-direction: column;
   align-items: start;
   gap: 10px;
+  padding: 1em 0.5em;
+  border: 1px solid lightgrey;
+  margin: 1em 0;
+  border-radius: 8px;
 }
 
 label {
@@ -211,11 +219,11 @@ tr:nth-child(even) {
   font-size: 14px;
   padding: 8px;
   border-radius: 25px;
+  min-width: 450px /* 375px */;
 }
 
 .asignatura i:hover {
   cursor: pointer;
-  color: var(--red);
 }
 
 .autocomplete-item {
@@ -230,4 +238,11 @@ tr:nth-child(even) {
   cursor: pointer;
   color: white;
   background-color: var(--red);
+}
+.agregar {
+  display: grid;
+  border-radius: 25px;
+  place-items: center;
+  width: 40px;
+  height: 40px;
 }

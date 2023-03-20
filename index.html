@@ -60,220 +60,326 @@
           </ul>
         </aside>
 
-        <div class="content">
-          <form action="" method="POST">
-            <h1>Nuevo Formulario</h1>
-            <div class="labelInput">
-              <label for="fechaPublicacion"> Fecha de Publicación: </label>
-              <input type="date" placeholder="" name="fechaPublicacion" />
-            </div>
-
-            <div class="labelInput" style="position: relative">
-              <label for="departamento"> Departamento: </label>
-              <div class="position-relative">
-                <input
-                  type="text"
-                  id="departamento"
-                  name="departamento"
-                  placeholder=""
-                />
-
-                <ul
-                  id="results"
-                  style="
-                    display: none;
-                    position: absolute;
-                    bottom: -276;
-                    border: 2px solid darkgray;
-                    padding: 10px;
-                    left: 0;
-                    transition: 0.4s all;
-
-                    background-color: #e0dfdf;
-                    text-align: left;
-                    border-radius: 8px;
-                    width: 100%;
-                    min-width: 45ch;
-                  "
-                ></ul>
-              </div>
-            </div>
-
-            <div class="labelInput">
-              <label for="area"> Area: </label>
-              <input type="text" placeholder="" name="area" />
-            </div>
-
-            <div class="">
+        <form action="" method="POST">
+          <h1 class="my-5">Nuevo Formulario</h1>
+          <div>
+            <!-- COL 1 -->
+            <div class="col-md-12">
               <div class="labelInput">
-                <label for="asignaturas"> Asignatura: </label>
-                <div class="d-flex gap-5">
-                  <input type="text" placeholder="" name="asignaturas" />
-                  <p style="min-width: 20ch">Extension en otra área?</p>
-                  <input type="checkbox" name="conExtension" />
+                <label for="fechaPublicacion"> Fecha de Publicación: </label>
+                <input type="date" placeholder="" name="fechaPublicacion" />
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div
+                    class="labelInput"
+                    style="position: relative; z-index: 100"
+                  >
+                    <label for="departamento"> Departamento: </label>
+                    <div class="position-relative">
+                      <input
+                        type="text"
+                        id="departamento"
+                        name="departamento"
+                        placeholder="Ej: Departamento De Letras"
+                      />
 
-                  <button style="width: 21ch" type="button">
+                      <ul
+                        id="results"
+                        style="
+                          display: none;
+                          position: absolute;
+                          bottom: -276;
+                          border: 2px solid darkgray;
+                          padding: 10px;
+                          left: 0;
+                          transition: 0.4s all;
+
+                          background-color: #e0dfdf;
+                          text-align: left;
+                          border-radius: 8px;
+                          width: 100%;
+                          min-width: 45ch;
+                        "
+                      ></ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="area"> Area: </label>
+                    <input
+                      type="text"
+                      placeholder="Ej: Ciencias Sociales"
+                      name="area"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div
+                style="
+                  text-align: start;
+                  border: 1px solid lightgray;
+                  width: 100%;
+                "
+                class="d-flex flex-column my-3 p-2 rounded gap-3"
+              >
+                <div class="labelInput">
+                  <label for="asignaturas"> Asignatura: </label>
+                  <input
+                    type="text"
+                    placeholder="Ej: Teoría y Critica Literarias I"
+                    name="asignaturas"
+                    style="width: 100%"
+                  />
+                </div>
+
+                <div
+                  class="d-flex align-items-center justify-content-start my-2"
+                >
+                  <div
+                    style="
+                      background-color: lightgrey;
+                      color: var(--text);
+                      padding: 0 1em;
+                    "
+                    class="badge d-flex my-2 gap-4 align-items-center justify-items-between"
+                  >
+                    Extensión de funciones docentes en otra asignatura
+                    <input type="checkbox" name="conExtension" />
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn text-white btn-sm mx-5"
+                    style="background-color: var(--red)"
+                  >
                     <i class="fas fa-plus px-1"> </i>
-                    Agregar asignatura
+                    Agregar Asignatura
                   </button>
                 </div>
+              </div>
 
-                <div class="d-flex flex-column gap-3">
-                  <div class="asignatura">
-                    <span
-                      class="d-flex gap-3 justify-content-between align-items-center px-3"
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-2 align-items-center px-3"
+                  >
+                    <p
+                      class="p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
                     >
                       TEORÍA Y METODOLOGÍA DE LA INVESTIGACIÓN
-                      <span class="badge bg-danger d-flex align-items-center"
-                        >con extensión</span
+                    </p>
+                    <span class="d-flex gap-4">
+                      <div
+                        style="background-color: var(--red)"
+                        class="badge d-flex align-items-center"
                       >
+                        con extensión de funciones
+                      </div>
                       <i class="fas fa-trash-alt px-3"></i>
                     </span>
-                  </div>
+                  </span>
+                </div>
 
-                  <div class="asignatura">
-                    <span
-                      class="d-flex justify-content-between gap-4 align-items-center px-3"
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
+                  >
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
                     >
                       TEORÍA Y CRITICA LITERARIAS I
+                    </p>
 
-                      <i class="fas fa-trash-alt px-3"></i>
-                    </span>
-                  </div>
-                  <div
-                    class="asignatura"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    data-bs-custom-class="custom-tooltip"
-                    data-bs-title="This top tooltip is themed via CSS variables."
+                    <i class="fas fa-trash-alt px-3"></i>
+                  </span>
+                </div>
+
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
                   >
-                    <span
-                      class="d-flex justify-content-between gap-4 align-items-center px-3"
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        font-size: 0.9em;
+                        text-align: start;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
                     >
                       TEORÍA Y CRITICA LITERARIAS II
-                      <span class="badge bg-danger d-flex align-items-center"
-                        >con extensión</span
-                      >
+                    </p>
+                    <span
+                      class="badge d-flex align-items-center"
+                      style="background-color: var(--red)"
+                    >
+                      con extensión de funciones</span
+                    >
+                    <span class="">
                       <i class="fas fa-trash-alt px-3"></i>
                     </span>
+                  </span>
+                </div>
+              </div>
+
+              <!-- <div class="tablaAsignaturas" style="margin-top: 20px">
+<table>
+<thead>
+  <tr>
+    <th>Asignatura</th>
+    <th>Extensión</th>
+    <th>Borrar</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Asignatura</td>
+    <td>Si</td>
+    <td class="celdaIcono">
+      <i class="fas fa-trash-alt"></i>
+    </td>
+  </tr>
+  <tr>
+    <td>Asignatura</td>
+    <td>No</td>
+    <td class="celdaIcono">
+      <i class="fas fa-trash-alt"></i>
+    </td>
+  </tr>
+  <tr>
+    <td>Asignatura</td>
+    <td>Si</td>
+    <td class="celdaIcono">
+      <i class="fas fa-trash-alt"></i>
+    </td>
+  </tr>
+</tbody>
+</table>
+</div> -->
+              <div class="row">
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="expedienteLlamado">
+                      Expediente Llamado Nº:
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Ej: 7-0756/16"
+                      name="expedienteLlamado"
+                    />
                   </div>
                 </div>
-                <!-- <div class="tablaAsignaturas" style="margin-top: 20px">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Asignatura</th>
-                        <th>Extensión</th>
-                        <th>Borrar</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>Asignatura</td>
-                        <td>Si</td>
-                        <td class="celdaIcono">
-                          <i class="fas fa-trash-alt"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Asignatura</td>
-                        <td>No</td>
-                        <td class="celdaIcono">
-                          <i class="fas fa-trash-alt"></i>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>Asignatura</td>
-                        <td>Si</td>
-                        <td class="celdaIcono">
-                          <i class="fas fa-trash-alt"></i>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div> -->
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="nup"> NUP: </label>
+                    <input type="text" placeholder="Ej: 1847/17" name="nup" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="cantidadCargos"> Cantidad de cargos: </label>
+                    <input type="number" placeholder="" name="cantidadCargos" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="cargo"> Cargo: </label>
+                    <input type="text" placeholder="" name="cargo" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="labelInput">
+                <label for="investigacion"> Investigación: </label>
+                <textarea
+                  rows="3"
+                  cols="75"
+                  placeholder=""
+                  name="investigacion"
+                ></textarea>
+              </div>
+
+              <div class="labelInput">
+                <label for="dedicacion"> Dedicación: </label>
+                <input type="text" placeholder="" name="dedicacion" />
+              </div>
+
+              <div class="labelInput">
+                <label for="ordenPrelacion"> Orden de Prelación: </label>
+                <input
+                  type="number"
+                  placeholder="Ej: 1668"
+                  name="ordenPrelacion"
+                />
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="oca"> Oca Nº: </label>
+                    <input type="text" placeholder="Ej: 5041/17" name="oca" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="OcaDesignacion"> OCA Designacion Nº: </label>
+                    <input type="text" placeholder="Ej: 544/18" name="" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="labelInput">
+                <label for="fechaCierre"> Fecha de Cierre: </label>
+                <input type="date" placeholder="" name="fechaCierre" />
+              </div>
+
+              <div class="labelInput">
+                <label for="recusaciones"> Recusaciones: </label>
+                <input type="text" placeholder="" name="recusaciones" />
+              </div>
+
+              <div class="labelInput">
+                <label for="expedienteConcurso">
+                  Expediente de Concurso Nº:
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ej: 7-2183/18"
+                  name="expedienteConcurso"
+                />
               </div>
             </div>
 
-            <div class="labelInput">
-              <label for="expedienteLlamado"> Expediente Llamado: </label>
-              <input type="text" placeholder="" name="expedienteLlamado" />
-            </div>
+            <!-- COL 2 -->
+            <div class="col-md-0">
+              <div class="labelInput">
+                <label for="interino"> Interino: </label>
+                <input type="text" placeholder="" name="interino" />
+              </div>
 
-            <div class="labelInput">
-              <label for="oca"> Oca Nro: </label>
-              <input
-                type="text"
-                placeholder=""
-                name="oca"
-                style="width: 10ch"
-              />
-            </div>
-
-            <div class="labelInput">
-              <label for="cantidadCargos"> Cantidad de cargos: </label>
-              <input type="number" placeholder="" name="cantidadCargos" />
-            </div>
-
-            <div class="labelInput">
-              <label for="cargo"> Cargo: </label>
-              <input type="text" placeholder="" name="cargo" />
-            </div>
-
-            <div class="labelInput">
-              <label for="investigacion"> Investigación: </label>
-              <textarea
-                rows="4"
-                cols="30"
-                placeholder=""
-                name="investigacion"
-              ></textarea>
-            </div>
-
-            <div class="labelInput">
-              <label for="dedicacion"> Dedicación: </label>
-              <input type="text" placeholder="" name="dedicacion" />
-            </div>
-
-            <div class="labelInput">
-              <label for="asignatura"> Asignatura: </label>
-              <input type="text" placeholder="" name="asignatura" />
-            </div>
-
-            <div class="labelInput">
-              <label for="ordenPrelacion"> Orden de Prelación: </label>
-              <input type="number" placeholder="" name="ordenPrelacion" />
-            </div>
-
-            <div class="labelInput">
-              <label for="nup"> NUP: </label>
-              <input type="text" placeholder="" name="nup" style="width: 8ch" />
-            </div>
-
-            <div class="labelInput">
-              <label for="fechaCierre"> Fecha de Cierre: </label>
-              <input type="date" placeholder="" name="fechaCierre" />
-            </div>
-
-            <div class="labelInput">
-              <label for="recusaciones"> Recusaciones: </label>
-              <input type="text" placeholder="" name="recusaciones" />
-            </div>
-
-            <div class="labelInput">
-              <label for="expedienteConcurso"> Expediente del Concurso: </label>
-              <input
-                type="text"
-                placeholder=""
-                name="expedienteConcurso"
-                style="width: 8ch"
-              />
-            </div>
-            <div class="labelInput">
-              <label for="interino"> Interino: </label>
-              <input type="text" placeholder="" name="interino" />
-            </div>
-            <span>
               <div class="checkboxRow">
                 <div class="labelInput">
                   <label for="departamento"> Postulantes: </label>
@@ -281,14 +387,15 @@
                     <input type="text" placeholder="" name="" />
 
                     <button
-                      style="margin-right: 20px; min-width: 10ch"
                       type="button"
+                      class="btn text-white btn-sm mx-5"
+                      style="background-color: var(--red)"
                     >
-                      <i class="fas fa-plus"> </i>
-                      Agregar postulante
+                      <i class="fas fa-plus px-1"> </i>
+                      Agregar Postulante
                     </button>
                   </div>
-                  <div class="tablaAsignaturas" style="margin-top: 20px">
+                  <!-- <div class="tablaAsignaturas" style="margin-top: 20px">
                     <table>
                       <thead>
                         <tr>
@@ -317,135 +424,292 @@
                         </tr>
                       </tbody>
                     </table>
-                  </div>
+                  </div> -->
                 </div>
               </div>
-            </span>
 
-            <span>
-              <div class="checkboxRow">
-                <div class="labelInput">
-                  <label for="seleccionados"> Seleccionados: </label>
-                  <div class="" style="display: flex; gap: 40px">
-                    <input type="text" placeholder="" name="seleccionados" />
-
-                    <button
-                      style="margin-right: 20px; min-width: 10ch"
-                      type="button"
+              <!-- POSTULANTES INGRESADOS -->
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-2 align-items-center px-3"
+                  >
+                    <p
+                      class="p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
                     >
-                      <i class="fas fa-plus"> </i>
-                      Agregar seleccionado
-                    </button>
+                    Silvana Gabriela Ferreyra
+                    </p>
+                    
+                      <i class="fas fa-trash-alt px-3"></i>
+                    </span>
+                  </span>
+                </div>
+
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
+                  >
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                    Salas Oroño
+                    </p>
+
+                    <i class="fas fa-trash-alt px-3"></i>
+                  </span>
+                </div>
+
+               
+              </div>
+
+              <div class="labelInput">
+                <label for="seleccionados"> Seleccionados: </label>
+                <div class="" style="display: flex; gap: 40px">
+                  <input type="text" placeholder="" name="seleccionados" />
+
+                  <button
+                    type="button"
+                    class="btn text-white btn-sm mx-5"
+                    style="background-color: var(--red)"
+                  >
+                    <i class="fas fa-plus px-1"> </i>
+                    Agregar Seleccionado
+                  </button>
+                </div>
+                <!-- <div class="tablaAsignaturas" style="margin-top: 20px">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Seleccionado</th>
+                        <th>Borrar</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Titi</td>
+                        <td class="celdaIcono">
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>Tito</td>
+                        <td class="celdaIcono">
+                          <i class="fas fa-trash-alt"></i>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div> -->
+              </div>
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
+                  >
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                    Salas Oroño
+                    </p>
+
+                    <i class="fas fa-trash-alt px-3"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="sustanciado"> Sustanciado: </label>
+                    <span style="display: flex; gap: 20px; align-items: center">
+                      <label for="sustanciado">Si</label>
+                      <input
+                        type="checkbox"
+                        name="sustanciado"
+                        id="checkSustanciado"
+                        value="si"
+                      />
+                    </span>
                   </div>
-                  <div class="tablaAsignaturas" style="margin-top: 20px">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Seleccionado</th>
-                          <th>Borrar</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>Titi</td>
-                          <td class="celdaIcono">
-                            <i class="fas fa-trash-alt"></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Tito</td>
-                          <td class="celdaIcono">
-                            <i class="fas fa-trash-alt"></i>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                </div>
+                <div class="col">
+                  <div
+                    class="labelInput"
+                    id="boxFechaSustanciado"
+                    style="display: none"
+                  >
+                    <label for="fechaSustanciado">
+                      Fecha de sustanciación:
+                    </label>
+                    <input type="date" placeholder="" name="fechaSustanciado" />
                   </div>
                 </div>
               </div>
-            </span>
 
-            <div class="labelInput">
-              <label for="sustanciado"> Sustanciado: </label>
-              <span style="display: flex; gap: 20px; align-items: center">
-                <input type="checkbox" name="sustanciado" value="si" />
-                <label for="sustanciado">Si</label>
-              </span>
-            </div>
-
-            <div class="labelInput">
-              <label for="fechaSustanciado"> Fecha de sustanciación: </label>
-              <input type="date" placeholder="" name="fechaSustanciado" />
-            </div>
-
-            <div class="labelInput">
-              <label for="comisionAsesora"> Comisión Asesora: </label>
-              <div class="" style="display: flex; gap: 40px">
-                <input type="text" placeholder="" name="" />
-                <button
-                  style="margin-right: 20px; min-width: 10ch"
-                  type="button"
-                >
-                  <i class="fas fa-plus"> </i>
-                  Agregar jurado
-                </button>
+              <div class="labelInput">
+                <label for="comisionAsesora"> Comisión Asesora: </label>
+                <div class="" style="display: flex; gap: 40px">
+                  <input type="text" placeholder="" name="" />
+                  <button
+                    type="button"
+                    class="btn text-white btn-sm mx-5"
+                    style="background-color: var(--red)"
+                  >
+                    <i class="fas fa-plus px-1"> </i>
+                    Agregar Jurado
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="tablaAsignaturas" style="margin-top: 20px">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Jurado</th>
-                    <th>Borrar</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Pancho</td>
-                    <td class="celdaIcono">
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Michis</td>
-                    <td class="celdaIcono">
-                      <i class="fas fa-trash-alt"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
 
-            <div class="labelInput">
-              <label for="OcaDesignacion"> OCA Designacion: </label>
-              <input type="text" placeholder="" name="" style="width: 8ch" />
-            </div>
+              <!--     <div class="tablaAsignaturas" style="margin-top: 20px">
+      <table>
+        <thead>
+          <tr>
+            <th>Jurado</th>
+            <th>Borrar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pancho</td>
+            <td class="celdaIcono">
+              <i class="fas fa-trash-alt"></i>
+            </td>
+          </tr>
+          <tr>
+            <td>Michis</td>
+            <td class="celdaIcono">
+              <i class="fas fa-trash-alt"></i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+              <div class="d-flex flex-column gap-2 mb-4">
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
+                  >
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                    Salvio Martin MENENDEZ
+                    </p>
 
-            <div class="labelInput">
-              <label for="fechaDesignacion"> Fecha de designación: </label>
-              <input type="date" placeholder="" name="fechaDesignacion" />
-            </div>
+                    <i class="fas fa-trash-alt px-3"></i>
+                  </span>
+                </div>
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
+                  >
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                    Andrea Cecilia MENEGOTTO
+                    </p>
 
-            <div class="labelInput">
-              <label for="observaciones"> Observaciones: </label>
-              <textarea
-                rows="4"
-                cols="30"
-                placeholder=""
-                name="observaciones"
-              ></textarea>
-            </div>
+                    <i class="fas fa-trash-alt px-3"></i>
+                  </span>
+                </div>
+                <div class="asignatura">
+                  <span
+                    class="d-flex justify-content-between gap-4 align-items-center px-3"
+                  >
+                    <p
+                      class="text-nowrap p-0 m-0"
+                      style="
+                        text-align: start;
+                        font-size: 0.9em;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                      "
+                    >
+                    Graciela ALVAREZ
+                    </p>
 
-            <div class="labelInput">
-              <label for="fechaPaseArchivo"> Fecha de pase a Archivo: </label>
-              <input type="date" placeholder="" name="fechaPaseArchivo" />
+                    <i class="fas fa-trash-alt px-3"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="fechaDesignacion">
+                      Fecha de designación:
+                    </label>
+                    <input type="date" placeholder="" name="fechaDesignacion" />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="labelInput">
+                    <label for="fechaPaseArchivo">
+                      Fecha de pase a Archivo:
+                    </label>
+                    <input type="date" placeholder="" name="fechaPaseArchivo" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="labelInput">
+                <label for="observaciones"> Observaciones: </label>
+                <textarea
+                  rows="3"
+                  cols="75"
+                  placeholder=""
+                  name="observaciones"
+                ></textarea>
+              </div>
             </div>
 
             <button type="submit" style="margin-bottom: 50px; margin-top: 30px">
               Finalizar Formulario
             </button>
-          </form>
-        </div>
+          </div>
+        </form>
       </main>
     </div>
   </body>

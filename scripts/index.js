@@ -39,16 +39,25 @@ window.onload = function () {
   ];
   const departamento = document.getElementById("departamento");
   const resultsHTML = document.getElementById("results");
+  const checkSustanciado = document.getElementById("checkSustanciado");
+  const boxFechaSustanciado = document.getElementById("boxFechaSustanciado");
 
+  checkSustanciado.onchange = function (event) {
+    if (event.target.checked) {
+      boxFechaSustanciado.style.display = "grid";
+    } else {
+      boxFechaSustanciado.style.display = "none";
+    }
+  };
   departamento.oninput = function () {
     let results = [];
     const userInput = this.value;
 
     resultsHTML.innerHTML = "";
 
-    if (userInput.length > 0) {
+    if (userInput && userInput.length > 0) {
       results = getResults(userInput);
-      resultsHTML.style.display = "block";
+      resultsHTML.style.display = "grid";
 
       for (i = 0; i < results.length; i++) {
         resultsHTML.innerHTML +=
@@ -73,6 +82,7 @@ window.onload = function () {
     this.innerHTML = "";
     resultsHTML.style.display = "none";
   };
+
   resultsHTML.onkeydown = function (event) {
     console.log(event);
     const setValue = event.target.innerText;
