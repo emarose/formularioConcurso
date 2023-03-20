@@ -545,20 +545,30 @@
                 <div class="col">
                   <div class="labelInput">
                     <label for="sustanciado"> Sustanciado: </label>
-                    <span style="display: flex; gap: 20px; align-items: center">
-                      <label for="sustanciado">Si</label>
-                      <input
+
+                    <div
+                    style="
+                      background-color: lightgrey;
+                      color: var(--text);
+                      padding: 0 1em;
+                      font-size: 15px;
+                    "
+                    class="badge d-flex my-2 gap-4 align-items-center justify-items-between"
+                  >
+                    SI
+                    <input
                         type="checkbox"
                         name="sustanciado"
                         id="checkSustanciado"
                         value="si"
                       />
-                    </span>
+                  </div>
+
                   </div>
                 </div>
-                <div class="col">
+                <div class="col text-start">
                   <div
-                    class="labelInput"
+                    class="labelInput py-4 "
                     id="boxFechaSustanciado"
                     style="display: none"
                   >
